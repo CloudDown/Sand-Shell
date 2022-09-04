@@ -36,4 +36,4 @@ if __name__ == '__main__':
     print(colored("ㅤㅤㅤㅤㅤmode 4 : [⚙️]", 'green'))
     print(" ")
     print(colored('ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤTYPE HELP FOR SHOW ALL COMMANDS', 'white', attrs=['bold']))
-    os.system ("C:\windows\soth\shell.py")    
+    os.system ("C:\Windows\Sand-Shell\shell.py")

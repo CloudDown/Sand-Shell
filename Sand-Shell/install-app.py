@@ -11,75 +11,86 @@ from datetime import datetime
 def main():
 #variable
 
-    commandsand = input(colored(r"[🕹️] !> ",'red')).lower()
+    commandsand = input(colored(r"[⏬] !> ",'cyan')).lower()
     now = datetime.now()
 
 
     if commandsand == ("clear"):
         os.system("cls")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nClear "+(now.strftime("%D(%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("help"):
-        os.system("help.html")
+        os.system("C:\windows\Sand-Shell\help.html")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
-        fichier.write("\nHelp "+(now.strftime("%D(%H:%M:%S)")))
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
+        fichier.write("\nHelp "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("log"):
-        os.system("type C:\windows\soth\log.txt")
+        os.system("type C:\windows\Sand-Shell\log.txt")
         print(" ")
         main()
 
     if commandsand == ("author"):
         webbrowser.open('https://github.com/CloudDown')
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nAuthor "+(now.strftime("%D(%H:%M:%S)")))
         fichier.close()
         main()
 
-    if commandsand == ("auto") or commandsand == ("autoclick"):
+
+    if commandsand == ("discord"):
+        webbrowser.open('https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86')
+        os.system ("pause")
+        os.system (r"%USERPROFILES%\Downloads\DiscordSetup.exe")
         print(" ")
-        os.system(r'C:\windows\soth\autoclick.exe')
-        print(" ")  
-        fichier = open("C:\windows\soth\log.txt", "a")
-        fichier.write("\nAutoclick "+(now.strftime("%D (%H:%M:%S)")))
-        fichier.close()      
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
+        fichier.write("\nInstall Discord "+(now.strftime("%D(%H:%M:%S)")))
+        fichier.close()
+        main()
+
+    if commandsand == ("spotify"):
+        os.system ("C:\windows\Sand-Shell\spot-install.bat")
+        os.system ("pause")
+        print(" ")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
+        fichier.write("\nInstall Spotify "+(now.strftime("%D(%H:%M:%S)")))
+        fichier.close()
         main()
 
     if commandsand == ("mod 1"):
-        os.system ("C:\windows\soth\shell.py")
+        os.system ("C:\windows\Sand-Shell\shell.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 1 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 2"):
-        os.system ("C:\windows\soth\game.py")
+        os.system ("C:\windows\Sand-Shell\game.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 2 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 3"):
-        os.system ("C:\windows\soth\install-app.py")
+        os.system ("C:\windows\Sand-Shell\install-app.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 3 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 4"):
-        os.system ("C:\windows\soth\settings.py")
+        os.system ("C:\windows\Sand-Shell\settings.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 4 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
@@ -103,6 +114,6 @@ if __name__ == '__main__':
 
     os.system( "title Sand-Shell" )
     print(" ")
-    print(colored('Game Mod Loaded ✅', 'red', attrs=['bold']))
+    print(colored('Install App Mod Loaded ✅', 'cyan', attrs=['bold']))
     print(" ")
     main()    

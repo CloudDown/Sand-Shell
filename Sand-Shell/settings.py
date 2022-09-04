@@ -17,60 +17,68 @@ def main():
 
     if commandsand == ("clear"):
         os.system("cls")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nClear "+(now.strftime("%D(%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("help"):
-        os.system("help.html")
+        os.system("C:\windows\Sand-Shell\help.html")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
-        fichier.write("\nHelp "+(now.strftime("%D(%H:%M:%S)")))
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
+        fichier.write("\nHelp "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("log"):
-        os.system("type C:\windows\soth\log.txt")
+        os.system("type C:\windows\Sand-Shell\log.txt")
         print(" ")
+        main()
+
+    if commandsand == ("config") or commandsand == ("DS"):
+        os.system("notepad.exe C:\windows\Sand-Shell\config.ini")
+        print(" ")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
+        fichier.write("\nConfig "+(now.strftime("%D (%H:%M:%S)")))
+        fichier.close()
         main()
 
     if commandsand == ("author"):
         webbrowser.open('https://github.com/CloudDown')
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nAuthor "+(now.strftime("%D(%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 1"):
-        os.system ("C:\windows\soth\shell.py")
+        os.system ("C:\windows\Sand-Shell\shell.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 1 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 2"):
-        os.system ("C:\windows\soth\game.py")
+        os.system ("C:\windows\Sand-Shell\game.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 2 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 3"):
-        os.system ("C:\windows\soth\install-app.py")
+        os.system ("C:\windows\Sand-Shell\install-app.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 3 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
 
     if commandsand == ("mod 4"):
-        os.system ("C:\windows\soth\settings.py")
+        os.system ("C:\windows\Sand-Shell\settings.py")
         print(" ")
-        fichier = open("C:\windows\soth\log.txt", "a")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nmod 4 "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
         main()
