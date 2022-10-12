@@ -11,7 +11,7 @@ from datetime import datetime
 def main():
 #variable
 
-    commandsand = input(colored(r"[⏬] !> ",'cyan')).lower()
+    commandsand = input('\033[36m'r"[⏬] !> "+'\033[0m').lower()
     now = datetime.now()
 
 

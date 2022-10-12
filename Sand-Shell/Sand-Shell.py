@@ -1,21 +1,10 @@
 import os
-from time import sleep
-import webbrowser
-from termcolor import colored
-import subprocess, sys
-from subprocess import Popen, PIPE
 import configparser
-from datetime import datetime
 
-if __name__ == '__main__':
-#variable
-
-
-
-#config code
-    title_color = "yellow"
-    command_color = "yellow"
-    title = colored('''
+config = configparser.ConfigParser()
+config.read('config.cfg')
+title_color = config.get('COLOR','Title')
+title = ('\033[1;33m'r'''
                    ____                      
                   (_  _)      _____                 _        _____ _          _ _                         
         .  .       / /       /  ___|               | |      /  ___| |        | | |                        
@@ -24,16 +13,20 @@ if __name__ == '__main__':
       \ /   /  _/ /_         /\__/ / (_| | | | | (_| |      /\__/ / | | |  __/ | |                        
  . ~. `\___/'./~.' /.~'`.    \____/ \__,_|_| |_|\__,_|      \____/|_| |_|\___|_|_|     Shell By CloudDown 
  ~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~
-''',title_color)
+''')
 
 #code   
 
-    os.system( "title Sand-Shell" )
-    print (title)
-    print(colored("ㅤㅤㅤㅤㅤㅤㅤmode 1 : [🏖️]", 'yellow'), end="")
-    print(colored("ㅤㅤㅤㅤㅤmode 2 : [🕹️]", 'red'), end="")
-    print(colored("ㅤㅤㅤㅤㅤmode 3 : [⏬]", 'cyan'), end="")
-    print(colored("ㅤㅤㅤㅤㅤmode 4 : [⚙️]", 'green'))
-    print(" ")
-    print(colored('ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤTYPE HELP FOR SHOW ALL COMMANDS', 'white', attrs=['bold']))
-    os.system ("C:\Windows\Sand-Shell\shell.py")
+os.system( "title Sand-Shell" )
+print (title)
+print("", end="")
+print('\033[1;33m',"ㅤㅤㅤㅤㅤㅤㅤmode 1 : [🏖️]", end="")
+print("", end="")
+print('\033[1;31m',"ㅤㅤㅤㅤㅤmode 2 : [🕹️]", end="")
+print("", end="")
+print('\033[1;36m',"ㅤㅤㅤㅤㅤmode 3 : [⏬]", end="")
+print("", end="")
+print('\033[1;32m',"ㅤㅤㅤㅤㅤmode 4 : [⚙️]")
+print("\033[0m")
+print('\033[3m''ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤTYPE HELP FOR SHOW ALL COMMANDS')
+os.system ("C:\Windows\Sand-Shell\shell.py")

@@ -1,7 +1,6 @@
 import os
 from time import sleep
 import webbrowser
-from termcolor import colored
 import subprocess, sys
 from subprocess import Popen, PIPE
 import configparser
@@ -10,12 +9,22 @@ from datetime import datetime
 
 def main():
 #variable
-
-    commandsand = input(colored(r"[🏖️] !>",'yellow')).lower()
+    CURR_DIR = os.path.dirname(os.path.realpath(__file__))
+    commandsand = input('\033[0;33m'r"[🏖️] "+(CURR_DIR)+" !>"+'\033[0m').lower()
     now = datetime.now()
 
 
     if commandsand == ("clear"):
+        os.system("cls")
+        fichier = open("C:\windows\Sand-Shell\log.txt", "a")
+        fichier.write("\nClear "+(now.strftime("%D (%H:%M:%S)")))
+        fichier.close()
+        main()
+
+
+    if commandsand[-1:1] == ("cd"):
+        CURR_DIR = os.path.dirname(os.path.realpath(commandsand[2:]))
+        os.system("pause")
         os.system("cls")
         fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nClear "+(now.strftime("%D (%H:%M:%S)")))
@@ -36,6 +45,7 @@ def main():
         fichier = open("C:\windows\Sand-Shell\log.txt", "a")
         fichier.write("\nopen log "+(now.strftime("%D (%H:%M:%S)")))
         fichier.close()
+        print(" ")
         main()
 
     if commandsand == ("clear log"):
@@ -181,8 +191,9 @@ def main():
 if __name__ == '__main__':
     title_color = "yellow"
     command_color = "yellow"
+    CURR_DIR = os.path.dirname(os.path.realpath(__file__))
     os.system( "title Sand-Shell" )
     print(" ")
-    print(colored('Default Mod Loaded ✅', 'yellow', attrs=['bold']))
+    print('\033[1;33m','Default Mod Loaded ✅')
     print(" ")
-    main()    
+    main()
