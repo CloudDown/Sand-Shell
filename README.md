@@ -14,6 +14,14 @@ Windows Python shell prototype. The app lives in `Sand-Shell/` and the installer
 
 Hardcoded paths assume `C:\Windows\Sand-Shell`.
 
+## Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+`settings.py` needs `termcolor`.
+
 ## Check syntax
 
 ```
