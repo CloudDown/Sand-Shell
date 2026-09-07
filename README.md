@@ -9,7 +9,7 @@ Windows Python shell prototype. The app lives in `Sand-Shell/` and the installer
 - `settings.py` — settings mode
 - `game.py` — extra mode
 - `help.html` — command list
-- `config.cfg` — color config
+- `config.cfg` — color config (`[COLOR]` `Title`, `Command`)
 - `install.bat` / `uninstall.bat` — Windows install helpers
 
 Hardcoded paths assume `C:\Windows\Sand-Shell`.
